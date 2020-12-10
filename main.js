@@ -141,7 +141,6 @@ console.log(user);
 // Si la propiedad "sabeProgramar" es true, mostrar en consola la siguiente frase: "Hola, mi nombre es [ACA EL NOMBRE] y
 // programo en [ACA EL LISTADO DE LENGUAJES/TECNOLOGIAS]"
 // Ejecutar la funcion
-// const sabeProgramar = user.sabeProgramar
 
 const mostrarTecnologias = (sabeProgramar, tecnologiasConocidas) => {
    
@@ -158,9 +157,12 @@ mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas)
 // Agregar el string "Proximamente DOM" al array dentro del objeto "user".
 // Ejecutar la funcion
 
-// user.tecnologiasConocidas["Proximamente DOM"]
+tecnologiasConocidas.push("Proximamente DOM")
 
+console.log(user)
+console.log(tecnologiasConocidas)
 
+mostrarTecnologias(user.sabeProgramar,tecnologiasConocidas)
 
 
 // Ejercicio 8
@@ -177,42 +179,53 @@ mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas)
 // El nombre hay que guardarlo con el formato expresado en el punto anterior.
 // No podemos escribir nuevamente los valores, sino utilizar los que ya estan guardados en el objeto user.
 
+const newUser = {
+        user:  {
+        email: "daniaramburu@gmail.com",
+        age: 27,
+      }
+}
+
+console.log(newUser)
+
+
+
 // Ejercicio 9
 // Tenemos un array de objetos con las ganadoras de algunas temporadas de Rupaul.
 // Cada objeto tiene las propiedades nombre, temporada y foto.
 // Crea una funcion con el nombre mostrarGanadoras, que reciba el objeto como parametro.
 // Dentro de la funcion, recorrer el array utilizando un ciclo for y mostrá el nombre y la temporada que ganó. Por ejemplo: Bianca Del Rio ganó la temporada 6
-// const ganadoras = [
-//   {
-//     nombre: 'Bebe Zahara Benet',
-//     temporada: '1',
-//     foto: 'http://www.nokeynoshade.party/images/bebe-zahara-benet.jpg'
-//   },
-//   {
-//     nombre: 'Tyra Sanchez',
-//     temporada: '2',
-//     foto: 'http://www.nokeynoshade.party/images/tyra-sanchez.jpg'
-//   },
-//   { nombre: 'Raja',
-//     temporada: '3',
-//     foto: 'http://www.nokeynoshade.party/images/raja.jpg'
-//   },
-//   {
-//     nombre: 'Sharon Needles',
-//     temporada: '4',
-//     foto: 'http://www.nokeynoshade.party/images/sharon-needles.jpg'
-//   },
-//   {
-//     nombre: 'Jinkx Monsoon',
-//     temporada: '5',
-//     foto: 'http://www.nokeynoshade.party/images/jinkx-monsoon.jpg'
-//   },
-//   {
-//     nombre: 'Bianca Del Rio',
-//     temporada: '6',
-//     foto: 'http://www.nokeynoshade.party/images/bianca-del-rio.jpg'
-//   }
-// ];
+const ganadoras = [
+  {
+    nombre: 'Bebe Zahara Benet',
+    temporada: '1',
+    foto: 'http://www.nokeynoshade.party/images/bebe-zahara-benet.jpg'
+  },
+  {
+    nombre: 'Tyra Sanchez',
+    temporada: '2',
+    foto: 'http://www.nokeynoshade.party/images/tyra-sanchez.jpg'
+  },
+  { nombre: 'Raja',
+    temporada: '3',
+    foto: 'http://www.nokeynoshade.party/images/raja.jpg'
+  },
+  {
+    nombre: 'Sharon Needles',
+    temporada: '4',
+    foto: 'http://www.nokeynoshade.party/images/sharon-needles.jpg'
+  },
+  {
+    nombre: 'Jinkx Monsoon',
+    temporada: '5',
+    foto: 'http://www.nokeynoshade.party/images/jinkx-monsoon.jpg'
+  },
+  {
+    nombre: 'Bianca Del Rio',
+    temporada: '6',
+    foto: 'http://www.nokeynoshade.party/images/bianca-del-rio.jpg'
+  }
+];
 
 // ///// RETORNO DE LA FUNCION
 // // Bebe Zahara Benet ganó la temporada 1
@@ -221,6 +234,26 @@ mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas)
 // // Sharon Needles ganó la temporada 4
 // // Jinkx Monsoon ganó la temporada 5
 // // Bianca Del Rio ganó la temporada 6
+
+const mostrarGanadoras = (ganadoras) => {
+    for (let i = 0; i < ganadoras.length; i++) {
+        console.log(`${ganadoras[i].nombre} ganó la temporada ${ganadoras[i].temporada}`)
+       // const element = ganadoras[i];
+       // console.log(element)
+    }
+}
+
+mostrarGanadoras(ganadoras)
+
+
+
+
+
+
+
+
+
+
 // Ejercicio 10
 // Tenemos un array de objetos, con las canciones de un disco de Nirvana
 // Cada objeto representa una canción, y tiene las propidades id, nombre, duracion (en segundos)
