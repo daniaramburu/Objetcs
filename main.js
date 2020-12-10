@@ -146,11 +146,13 @@ console.log(user);
 const mostrarTecnologias = (sabeProgramar, tecnologiasConocidas) => {
    
   if (sabeProgramar) {
-    console.log( `Hola, mi nombre es ${user.firstName} y programo en ${user.tecnologiasConocidas}`);
+    console.log( `Hola, mi nombre es ${user.firstName} y programo en ${tecnologiasConocidas}`);
   }
 
 
 };
+
+mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas)
 
 // Ejercicio 7
 // Agregar el string "Proximamente DOM" al array dentro del objeto "user".
