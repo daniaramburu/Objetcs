@@ -14,7 +14,9 @@ const user = {
   age: 27,
 };
 console.log(user);
-console.log( `Hola, mi nombre es ${user.firstName} ${user.lastName} y tengo ${user.age} años`);
+console.log(
+  `Hola, mi nombre es ${user.firstName} ${user.lastName} y tengo ${user.age} años`
+);
 
 //Ejercicio 2
 // Tenemos un listado de personas y necesitamos guardarlo en una se de datos
@@ -143,27 +145,25 @@ console.log(user);
 // Ejecutar la funcion
 
 const mostrarTecnologias = (sabeProgramar, tecnologiasConocidas) => {
-   
   if (sabeProgramar) {
-    console.log( `Hola, mi nombre es ${user.firstName} y programo en ${tecnologiasConocidas}`);
+    console.log(
+      `Hola, mi nombre es ${user.firstName} y programo en ${tecnologiasConocidas}`
+    );
   }
-
-
 };
 
-mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas)
+mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas);
 
 // Ejercicio 7
 // Agregar el string "Proximamente DOM" al array dentro del objeto "user".
 // Ejecutar la funcion
 
-tecnologiasConocidas.push("Proximamente DOM")
+tecnologiasConocidas.push("Proximamente DOM");
 
-console.log(user)
-console.log(tecnologiasConocidas)
+console.log(user);
+console.log(tecnologiasConocidas);
 
-mostrarTecnologias(user.sabeProgramar,tecnologiasConocidas)
-
+mostrarTecnologias(user.sabeProgramar, tecnologiasConocidas);
 
 // Ejercicio 8
 // Por un cambio en los requerimientos del proyecto, necesitamos que el nombre del objeto user ahora sea un objeto con el siguiente formato:
@@ -180,15 +180,13 @@ mostrarTecnologias(user.sabeProgramar,tecnologiasConocidas)
 // No podemos escribir nuevamente los valores, sino utilizar los que ya estan guardados en el objeto user.
 
 const newUser = {
-        user:  {
-        email: "daniaramburu@gmail.com",
-        age: 27,
-      }
-}
+  user: {
+    email: "daniaramburu@gmail.com",
+    age: 27,
+  },
+};
 
-console.log(newUser)
-
-
+console.log(newUser);
 
 // Ejercicio 9
 // Tenemos un array de objetos con las ganadoras de algunas temporadas de Rupaul.
@@ -197,34 +195,35 @@ console.log(newUser)
 // Dentro de la funcion, recorrer el array utilizando un ciclo for y mostrá el nombre y la temporada que ganó. Por ejemplo: Bianca Del Rio ganó la temporada 6
 const ganadoras = [
   {
-    nombre: 'Bebe Zahara Benet',
-    temporada: '1',
-    foto: 'http://www.nokeynoshade.party/images/bebe-zahara-benet.jpg'
+    nombre: "Bebe Zahara Benet",
+    temporada: "1",
+    foto: "http://www.nokeynoshade.party/images/bebe-zahara-benet.jpg",
   },
   {
-    nombre: 'Tyra Sanchez',
-    temporada: '2',
-    foto: 'http://www.nokeynoshade.party/images/tyra-sanchez.jpg'
-  },
-  { nombre: 'Raja',
-    temporada: '3',
-    foto: 'http://www.nokeynoshade.party/images/raja.jpg'
+    nombre: "Tyra Sanchez",
+    temporada: "2",
+    foto: "http://www.nokeynoshade.party/images/tyra-sanchez.jpg",
   },
   {
-    nombre: 'Sharon Needles',
-    temporada: '4',
-    foto: 'http://www.nokeynoshade.party/images/sharon-needles.jpg'
+    nombre: "Raja",
+    temporada: "3",
+    foto: "http://www.nokeynoshade.party/images/raja.jpg",
   },
   {
-    nombre: 'Jinkx Monsoon',
-    temporada: '5',
-    foto: 'http://www.nokeynoshade.party/images/jinkx-monsoon.jpg'
+    nombre: "Sharon Needles",
+    temporada: "4",
+    foto: "http://www.nokeynoshade.party/images/sharon-needles.jpg",
   },
   {
-    nombre: 'Bianca Del Rio',
-    temporada: '6',
-    foto: 'http://www.nokeynoshade.party/images/bianca-del-rio.jpg'
-  }
+    nombre: "Jinkx Monsoon",
+    temporada: "5",
+    foto: "http://www.nokeynoshade.party/images/jinkx-monsoon.jpg",
+  },
+  {
+    nombre: "Bianca Del Rio",
+    temporada: "6",
+    foto: "http://www.nokeynoshade.party/images/bianca-del-rio.jpg",
+  },
 ];
 
 // ///// RETORNO DE LA FUNCION
@@ -236,23 +235,16 @@ const ganadoras = [
 // // Bianca Del Rio ganó la temporada 6
 
 const mostrarGanadoras = (ganadoras) => {
-    for (let i = 0; i < ganadoras.length; i++) {
-        console.log(`${ganadoras[i].nombre} ganó la temporada ${ganadoras[i].temporada}`)
-       // const element = ganadoras[i];
-       // console.log(element)
-    }
-}
+  for (let i = 0; i < ganadoras.length; i++) {
+    console.log(
+      `${ganadoras[i].nombre} ganó la temporada ${ganadoras[i].temporada}`
+    );
+    // const element = ganadoras[i];
+    // console.log(element)
+  }
+};
 
-mostrarGanadoras(ganadoras)
-
-
-
-
-
-
-
-
-
+mostrarGanadoras(ganadoras);
 
 // Ejercicio 10
 // Tenemos un array de objetos, con las canciones de un disco de Nirvana
@@ -261,30 +253,68 @@ mostrarGanadoras(ganadoras)
 // La duración total del disco (suma de la duración de cada canción)
 // La duración promedio por canción (un promedio entre todas las duraciones)
 // Para ello crear las funciones calcularDuracionTotal y calcularPromedioPorCancion
-// const nevermind = [
-//   { id: 1, nombre: "Smells Like Teen Spirit", duracion: 302 },
-//   { id: 2, nombre: "In Bloom", duracion: 255 },
-//   { id: 3, nombre: "Come As You Are", duracion: 219 },
-//   { id: 4, nombre: "Breed", duracion: 184 },
-//   { id: 5, nombre: "Lithium", duracion: 257 }
-// ];
+
+const nevermind = [
+  { id: 1, nombre: "Smells Like Teen Spirit", duracion: 302 },
+  { id: 2, nombre: "In Bloom", duracion: 255 },
+  { id: 3, nombre: "Come As You Are", duracion: 219 },
+  { id: 4, nombre: "Breed", duracion: 184 },
+  { id: 5, nombre: "Lithium", duracion: 257 },
+];
+
+let total = 0;
+const calcularDuracionTotal = (nevermind) => {
+  for (let i = 0; i < nevermind.length; i++) {
+    const element = nevermind[i].duracion;
+    //  console.log(element)
+    total += element;
+  }
+  console.log(total);
+};
+calcularDuracionTotal(nevermind);
+
+const calcularPromedioPorCancion = () => {
+  // console.log (` total ${total}`)
+  const promedio = total / 5;
+  console.log(promedio);
+};
+
+calcularPromedioPorCancion();
 
 // ///// RESULTADO
 // console.log(calcularDuracionTotal); // 1217
 // console.log(calcularPromedioPorCancion); // 243.4
+
 // Ejercicio 11
 // Tenemos un array de objetos, que representa un listado de bandas
 // Cada objeto representa una banda, y tiene las propidades id, nombre, fundacion, activa
 // Crear una funcion que muestre en consola cada banda del array, con la siguiente lógica:
 // Si la banda está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] está activa desde el año [AÑO DE FUNDACIÓN]"
 // Si la banda NO está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] no está activa"
-// const bandas = [
-//   { id: 1, nombre: "Nirvana", fundacion: 1987, activa: false },
-//   { id: 2, nombre: "Foo Fighters", fundacion: 1994, activa: true },
-//   { id: 3, nombre: "Led Zeppelin", fundacion: 1967, activa: false },
-//   { id: 3, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
-//   { id: 3, nombre: "Pearl Jam", fundacion: 1990, activa: true },
-// ];
+const bandas = [
+  { id: 1, nombre: "Nirvana", fundacion: 1987, activa: false },
+  { id: 2, nombre: "Foo Fighters", fundacion: 1994, activa: true },
+  { id: 3, nombre: "Led Zeppelin", fundacion: 1967, activa: false },
+  { id: 3, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
+  { id: 3, nombre: "Pearl Jam", fundacion: 1990, activa: true },
+];
+
+const verificaSiestaActiva = (bandas) => {
+    for (let i = 0; i < bandas.length; i++) {
+        const estaActiva = bandas[i].activa;
+        
+        if (estaActiva == true) {
+            console.log (`${bandas[i].nombre}esta activa desde el año ${bandas[i].fundacion}`)
+        }
+        else {
+            console.log(`${bandas[i].nombre} no está activa`)
+        }
+    }
+}
+
+verificaSiestaActiva(bandas)
+
+
 
 ///// RESULTADO
 // Nirvana no está activa
